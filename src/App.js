@@ -16,10 +16,10 @@ const App = () => {
   return (
     <div>
       <header className="app-header h-80 text-center grid">
-        <h1 className="font-medium text-4xl text-white self-center">
+        <h1 className="font-medium text-2xl lg:text-4xl text-white self-center">
           IP Address Tracker
         </h1>
-        <SearchIp setIp={setIp} />
+        <SearchIp ip={ip} setIp={setIp} />
       </header>
 
       <SearchResult ip={ip} />

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import arrow from '../img/icon-arrow.svg'
 
-const SearchIp = ( {setIp} ) => {
+const SearchIp = ( {ip, setIp} ) => {
 
   const [inputValue, setInputValue] = useState('')
 
@@ -12,18 +12,17 @@ const SearchIp = ( {setIp} ) => {
   const formSubmit = (e) => {
     e.preventDefault()
 
-    if( inputValue.trim().length > 4 ){
+    if( inputValue.trim().length > 4 && ip !== inputValue){
       setIp(inputValue)
       setInputValue('')
     }
-    // console.log( inputValue )
   }
 
   return (
-    <form className='input h-20 flex justify-center mb-5' onSubmit={ formSubmit }> 
+    <form className='input h-20 flex justify-center mb-24 lg:mb-5' onSubmit={ formSubmit }> 
         <input
         type='text'
-        className='cursor-pointer h-14 rounded-l-xl  w-1/4 focus:outline-none pl-5'
+        className='cursor-pointer h-14 rounded-l-xl w-68 lg:w-1/4 focus:outline-none p-6 text-lg'
         placeholder='Search for any IP address or domain'
         value={inputValue}
         onChange={inputChange}

@@ -44,7 +44,6 @@ button:hover{
 
 .card{
   background-color: white;
-  height: 12rem;
   left: 15%;
   margin-top: -6rem;
   position: absolute;
@@ -62,10 +61,16 @@ h3{
   z-index: 0;
 }
 
-/*========== Mobile 375px==========*/
-@media (max-width: 600px) {
-  .card{
-    height: 17rem;
-    bottom: 20rem;
+/*========== Mobile ==========*/
+@media (max-width: 640px) {
+  .leaflet-bar{
+    display: none;
+  }
+  
+  .card {
+    height: auto;
+    margin-top: -10rem;
+    left: 9%;
+    width: 82%;
   }
 }
