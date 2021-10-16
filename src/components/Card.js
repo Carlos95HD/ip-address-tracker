@@ -2,8 +2,7 @@ import React from 'react'
 
 const Card = ({info}) => {
 
-  // console.log( info )
-  const { 
+    const { 
     ip,
     isp,
     city,

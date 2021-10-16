@@ -1,17 +1,15 @@
-import React, { useState } from "react";
-// import ClientIp from "./components/ClientIp";
+import React, { useState, useEffect } from "react";
+import ClientIp from "./components/ClientIp";
 import SearchIp from "./components/SearchIp";
 import SearchResult from "./components/SearchResult";
-// import Map from "./components/Map";
 
 import "./index.css";
 
 const App = () => {
-  const [ip, setIp] = useState('');
-  // useEffect(() => {
-  //   ClientIp(setIp);
-  // }, []);
-  // console.log("Ip inicial", ip);
+  const [ip, setIp] = useState("");
+  useEffect(() => {
+    ClientIp(setIp);
+  }, []);
 
   return (
     <div>
@@ -23,11 +21,6 @@ const App = () => {
       </header>
 
       <SearchResult ip={ip} />
-      {/* <div className="map__container"> */}
-        {/* <SearchResult ip={ip} /> */}
-        {/* <Map center={[0,0]} zoom={} /> */}
-      {/* </div> */}
-
     </div>
   );
 };
